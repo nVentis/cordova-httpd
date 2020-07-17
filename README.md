@@ -2,7 +2,9 @@
 
 # Forked to add a MIME-Type for .mjs files, allowing native usage of ES6 module syntax in Cordova Apps
 
-Tested on Android. Be sure to import respective scripts from the hosted server. Also, see https://stackoverflow.com/a/58892467/3362188 , i.e. follow these steps to avoid (copied from SO). Entering the port is neccessary as well.
+Tested on Android. Be sure to import respective scripts from the hosted server.
+
+To overcome the next obstacle when importing scripts (net::ERR_CLEARTEXT_NOT_PERMITTED), see https://stackoverflow.com/a/58892467/3362188 or follow these steps (copied from SO). Entering the port is neccessary.
 
 add this to your CONFIG.XML, top of your code.
 
