@@ -4,33 +4,33 @@
 
 add this to your CONFIG.XML, top of your code.
 
-<access origin="*" />
-<allow-navigation href="*" />
+	<access origin="*" />
+	<allow-navigation href="*" />
 
 and this, under the platform android.
 
-<edit-config file="app/src/main/AndroidManifest.xml" 
-   mode="merge" target="/manifest/application" 
-   xmlns:android="http://schemas.android.com/apk/res/android">
-     <application android:usesCleartextTraffic="true" />
-     <application android:networkSecurityConfig="@xml/network_security_config" />
- </edit-config>
- <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+	<edit-config file="app/src/main/AndroidManifest.xml" 
+	   mode="merge" target="/manifest/application" 
+	   xmlns:android="http://schemas.android.com/apk/res/android">
+	     <application android:usesCleartextTraffic="true" />
+	     <application android:networkSecurityConfig="@xml/network_security_config" />
+	 </edit-config>
+	 <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
 
 add the follow code to this file "resources/android/xml/network_security_config.xml" (create the file)
 
-<?xml version="1.0" encoding="utf-8"?>
-<network-security-config>
-    <base-config cleartextTrafficPermitted="true">
-	<trust-anchors>
-	    <certificates src="system" />
-	</trust-anchors>
-    </base-config>
-    <domain-config cleartextTrafficPermitted="true">
-	<domain includeSubdomains="true">localhost</domain>
-	<domain includeSubdomains="true">localhost:port</domain>
-    </domain-config>
-</network-security-config>
+	<?xml version="1.0" encoding="utf-8"?>
+	<network-security-config>
+	    <base-config cleartextTrafficPermitted="true">
+		<trust-anchors>
+		    <certificates src="system" />
+		</trust-anchors>
+	    </base-config>
+	    <domain-config cleartextTrafficPermitted="true">
+		<domain includeSubdomains="true">localhost</domain>
+		<domain includeSubdomains="true">localhost:port</domain>
+	    </domain-config>
+	</network-security-config>
 
 # Original README continue:
 
