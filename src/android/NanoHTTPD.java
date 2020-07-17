@@ -1122,6 +1122,7 @@ public class NanoHTTPD
 						"mov		video/quicktime " +
 						"swf		application/x-shockwave-flash " +
 						"js			application/javascript "+
+						"mjs		application/javascript "+
 						"pdf		application/pdf "+
 						"doc		application/msword "+
 						"ogg		application/x-ogg "+
