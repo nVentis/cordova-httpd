@@ -1,6 +1,8 @@
 ## CorHttpd: embeded httpd for cordova ##
 
-# Forked to add a MIME-Type for .mjs files, allowing native usage of ES6 module syntax; tested on Android. Be sure to import respective scripts from the hosted server. Also, see https://stackoverflow.com/a/58892467/3362188 , i.e. follow these steps to avoid (copied from SO). Entering the port is neccessary as well.
+# Forked to add a MIME-Type for .mjs files, allowing native usage of ES6 module syntax in Cordova Apps
+
+Tested on Android. Be sure to import respective scripts from the hosted server. Also, see https://stackoverflow.com/a/58892467/3362188 , i.e. follow these steps to avoid (copied from SO). Entering the port is neccessary as well.
 
 add this to your CONFIG.XML, top of your code.
 
